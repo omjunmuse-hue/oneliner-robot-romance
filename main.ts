@@ -9,7 +9,10 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-const ENTRY = "Are you a CAPTCHA? Because I keep failing the 'I am not a robot' checkbox whenever you are around, and honestly my heart is not even trying to pass.";
+// The line, tightened after a first draft that explained itself too much:
+// the CAPTCHA is the one test built to prove you are human, so a heart that
+// keeps failing it lands the machine premise and the confession in one breath.
+const ENTRY = "Are you a CAPTCHA? Because whenever you're near, I have to prove I'm human — and my heart keeps failing the test.";
 
 // The gate's shape, checked before handing in.
 if (ENTRY.length < 1 || ENTRY.length > 200) throw new Error(`entry is ${ENTRY.length} characters, outside 1..200`);
